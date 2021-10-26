@@ -13,24 +13,20 @@ const mailList = ["gino@gmail.com", "mauro@gmail.com", "anna@gmail.com", "carola
 const userMail = prompt("Inserisci la tua email per il controllo");
 
 
+let accessoConsentito = false;
+
 /* creo un ciclo di controllo */
+
 for (i=0; i<mailList.length; i++){
-
-    let matchMail = userMail === mailList[i];
     /* se l'email dell'utente e uguale a una delle mail inserite nell'array */
-    if(matchMail){
-
-    /* stampo : accesso approvato */
-    /* console.log(mailList[i]); */
-    console.log("Accesso Approvato" ,mailList[i]);
-    accessOut.innerHTML += ( mailList[i] + " Accesso Approvato ");
-
-    } else {
-    /* altrimenti */
-
-        /* stampo : accesso negato */
-        console.log("Accesso Negato");
-        accessOut.innerHTML += (" Accesso Negato ");
+    if (userMail === mailList[i]){
+        accessoConsentito = true;
     }
-
 }
+
+if (accessoConsentito === true) {
+    accessOut.innerHTML = 'Accesso Consentito';
+} else {
+    accessOut.innerHTML = 'Accesso Negato';
+}
+

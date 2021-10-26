@@ -4,6 +4,8 @@ Chiedi all’utente la sua email, controlla che sia nella lista di chi può acce
 Qui, come detto, NON possiamo usare metodi nuovi sugli array ma lo facciamo con le cose viste questa mattina. */
 
 const accessOut = document.getElementById("access");
+const lock = document.querySelector(".locked");
+const unlock = document.querySelector(".unlocked");
 
 
 /* creo un'array con 5 email */

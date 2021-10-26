@@ -23,14 +23,14 @@ for (i=0; i<mailList.length; i++){
     /* stampo : accesso approvato */
     /* console.log(mailList[i]); */
     console.log("Accesso Approvato" ,mailList[i]);
-    /* accessOut.innerHTML = ("Accesso Approvato"); */
+    accessOut.innerHTML += ( mailList[i] + " Accesso Approvato ");
 
     } else {
     /* altrimenti */
 
         /* stampo : accesso negato */
         console.log("Accesso Negato");
-        /* accessOut.innerHTML = ("Accesso Negato"); */
+        accessOut.innerHTML += (" Accesso Negato ");
     }
 
 }

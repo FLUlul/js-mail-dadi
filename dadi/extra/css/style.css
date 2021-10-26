@@ -1,0 +1,23 @@
+body{
+    background-color: black;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+button {
+    width: 100px;
+    height: 100px;
+}
+
+[class*='out'], 
+#out {
+    color: white;
+    font-size:100px;
+}
+

@@ -8,8 +8,7 @@ const inputMail = document.getElementById("user-email");
 const verifyBtn = document.getElementById("verify");
 
 
-const lock = document.querySelector(".locked");
-const unlock = document.querySelector(".unlocked");
+
 
 
 verifyBtn.addEventListener("click", 
@@ -19,15 +18,14 @@ verifyBtn.addEventListener("click",
         /* creo un'array con 5 email */
         const mailList = ["gino@gmail.com", "mauro@gmail.com", "anna@gmail.com", "carola@gmail.com", "valerio@gmail.com"];
 
-        /* chiedo all'utente la sua mail */
         /* const userMail = prompt("Inserisci la tua email per il controllo"); */
         const userMail = inputMail.value;
 
-
-
         let accessoConsentito = false; 
 
-        /* creo un ciclo di controllo */
+        const lock = document.querySelector(".locked");
+        const unlock = document.querySelector(".unlocked");
+
 
         for (i=0; i<mailList.length; i++){
             /* se l'email dell'utente e uguale a una delle mail inserite nell'array */
@@ -35,13 +33,17 @@ verifyBtn.addEventListener("click",
                 accessoConsentito = true;
             }
         }
-
         if (accessoConsentito === true) {
             accessOut.innerHTML = 'Accesso Consentito';
             accessOut.classList.add("green");
+            lock.classList.add("none");
+            unlock.classList.remove("none");
         } else {
             accessOut.innerHTML = 'Accesso Negato';
             accessOut.classList.add("red");
+            accessOut.classList.remove("green");
+            unlock.classList.add("none");
+            lock.classList.remove("none");
         }
         console.log(inputMail.value);
     }

@@ -34,12 +34,12 @@ verifyBtn.addEventListener("click",
             }
         }
         if (accessoConsentito === true) {
-            accessOut.innerHTML = 'Accesso Consentito';
+            accessOut.innerHTML = 'Access Granted';
             accessOut.classList.add("green");
             lock.classList.add("none");
             unlock.classList.remove("none");
         } else {
-            accessOut.innerHTML = 'Accesso Negato';
+            accessOut.innerHTML = 'Access Denied';
             accessOut.classList.add("red");
             accessOut.classList.remove("green");
             unlock.classList.add("none");
